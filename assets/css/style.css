@@ -9,3 +9,28 @@ body,html {
 }
 
 
+.left {
+    float: left;
+    width: 25%;
+    border: solid white;
+}
+
+.right {
+    display: block;
+    width: 75%;
+    float: right;
+    border: solid white;
+}
+
+.day-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+
+
