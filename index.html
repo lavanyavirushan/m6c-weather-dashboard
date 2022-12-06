@@ -1,9 +1,9 @@
-<!-- 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
     <link
       rel="stylesheet"
@@ -15,147 +15,209 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    <link/>
-    <script src="https://kit.fontawesome.com/7b21585175.js" crossorigin="anonymous"></script>
-  </head> -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link />
+    <script
+      src="https://kit.fontawesome.com/7b21585175.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+</html>
 
-<!-- <body> -->
-<!-- SITE HEADER -->
-<!-- <header class="p-5 mb-4 text-center header">
-      <figure class="weather-dashboard">
-        <img src="./assets/images/weather-dashboard.jpeg" alt="weather dashboard"/>
-        <h1>Weather Dashboard</h1>
-      </figure>
-      
-    </header>
+<body class="container container-md">
+  <header class="pt-2 pb-2 text-center header">
+    <h1>Weather Dashboard</h1>
+  </header>
 
-    <main class="container-fluid">
-      <div class="row"> -->
-<!-- LEFT SIDE Search Bar Content -->
-<!-- <section class="left">
-          <div class="col-md-8 col-xl-10">
-            <h2 class="title">Search for a City:</h2>
-            <div class="input-group rounded city-input">
-              <input
-                type="search"
-                class="form-control rounded"
-                placeholder="Search"
-                aria-label="Search"
-                aria-describedby="search-addon"
-              />
-            </div>
-            <input class="btn btn-primary col-md-8 col-xl-10" type="search" value="search" />
-          </div> -->
+  <main class="row">
+    <!-- Left Content -->
+    <div class="col-md-12 col-xl-3">
+      <!-- Search city card -->
+      <div class="card mb-3">
+        <h2 class="h2 card-header custom-card-header">Search for City:</h2>
+        <div class="card-body">
+          <!-- city search input and button -->
+          <form class="form-inline search-input">
+            <input
+              class="form-control mr-sm-2 mb-3 search-bar"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success search-btn btn-block"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <!-- city search history section -->
+        <div class="hidden">
+          <ul class="list-group list-group-flush" id="searched-history">
+            <li class="list-group-item">City searched-history</li>
+            <li class="list-group-item">City searched-history</li>
+            <li class="list-group-item">City searched-history</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-<!-- SEARCH HISTORY -->
-<!-- <div class="d-flex flex-column justify-content-around d-inline-flex p-2 mb-3 city-history">
-            <div class="p-2">CITY</div>
-            <div class="p-2">CITY</div>
-            <div class="p-2">CITY</div>
+    <!-- Right Content -->
+    <div class="col-md-12 col-xl-9 text-center">
+      <div class="card mb-4">
+        <div class="current-weather">
+          <div class="h2 card-header" id="current-city-name">
+            Current City Name
           </div>
-        </section> -->
-
-<!-- RIGHT SIDE View CITY, DATE, temp, wind, humidity -->
-<!-- <section class="right">
-          <div class="col-md col-xl-8">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-45">
-                <img
-                  src="./assets/images/snowy-weather.jpeg"
-                  alt="weather forecast status"
-                  class="img-fluid rounded-start"
-                />
-              </div>
-              <div class="col-md-80">
-                <div class="card-body">
-                  <h2 class="card-title">Card name and date</h5>
-                    <ul class="list-group list-group-light list-group-small">
-                      <li class="temp list-group-item px-4">Temp: </li>
-                      <li class="wind list-group-item px-4">Wind: </li>
-                      <li class="humidity list-group-item px-4">Humidity: </li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-<!-- RIGHT SIDE display 5 day Forecast -->
-<!-- <h3>5-Day Forecast: </h2>
-          <div class="row row-cols-1 row-cols-md-5 g-4">
-            <div class="col">
-              <div class="card">
-                <h4 class="future-date">Future Date</h4>
-                <div class="card-body">
-                  <i class="fa-solid fa-rainbow fa-3x center"></i>
-                  <ul class="list-group list-group-light list-group-small">
-                    <li class="temp list-group-item px-4">Temp: </li>
-                    <li class="wind list-group-item px-4">Wind: </li>
-                    <li class="humidity list-group-item px-4">Humidity: </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <h4 class="future-date">Future Date</h4>
-                <div class="card-body">
-                  <i class="fa-solid fa-rainbow fa-3x center"></i>
-                  <ul class="list-group list-group-light list-group-small">
-                    <li class="temp list-group-item px-4">Temp: </li>
-                    <li class="wind list-group-item px-4">Wind: </li>
-                    <li class="humidity list-group-item px-4">Humidity: </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <h4 class="future-date">Future Date</h4>
-                <div class="card-body">
-                  <i class="fa-solid fa-rainbow fa-3x center"></i>
-                  <ul class="list-group list-group-light list-group-small">
-                    <li class="temp list-group-item px-4">Temp: </li>
-                    <li class="wind list-group-item px-4">Wind: </li>
-                    <li class="humidity list-group-item px-4">Humidity: </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <h4 class="future-date">Future Date</h4>
-                <div class="card-body">
-                  <i class="fa-solid fa-rainbow fa-3x center"></i>
-                  <ul class="list-group list-group-light list-group-small">
-                    <li class="temp list-group-item px-4">Temp: </li>
-                    <li class="wind list-group-item px-4">Wind: </li>
-                    <li class="humidity list-group-item px-4">Humidity: </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <h4 class="future-date">Future Date</h4>
-                <div class="card-body">
-                  <i class="fa-solid fa-rainbow fa-3x center"></i>
-                  <ul class="list-group list-group-light list-group-small">
-                    <li class="temp list-group-item px-4">Temp: </li>
-                    <li class="wind list-group-item px-4">Wind: </li>
-                    <li class="humidity list-group-item px-4">Humidity: </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="card-body">
+            <h5 class="h3 current-date">Date</h5>
+            <p class="current-temp">Current temperature with icon?</p>
+            <ul class="list-group list-group-flush overview current-info">
+              <li class="current-temp">Temp:</li>
+              <li class="current-wind">Wind:</li>
+              <li class="current-humidity">Humidity:</li>
+            </ul>
           </div>
-        </section>
+        </div>
       </div>
 
-    </main>
-    <footer></footer>
+      <div class="h2 card mb-1 card-header">5-Day Forecast:</div>
+      <div class="d-flex justify-content-between">
+        <div class="week-day">
+          <div class="each-card">
+            <h4 class="future-date">Future date</h4>
+            <i class="fa-solid fa-rainbow fa-3x center"></i>
+            <ul class="future-info">
+              <li class="future-temp">Temp:</li>
+              <li class="future-wind">Wind:</li>
+              <li class="future-humidity">Humidity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="week-day">
+          <div class="each-card">
+            <h4 class="future-date">Future date</h4>
+            <i class="fa-solid fa-rainbow fa-3x center"></i>
+            <ul class="future-info">
+              <li class="future-temp">Temp:</li>
+              <li class="future-wind">Wind:</li>
+              <li class="future-humidity">Humidity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="week-day">
+          <div class="each-card">
+            <h4 class="future-date">Future date</h4>
+            <i class="fa-solid fa-rainbow fa-3x center"></i>
+            <ul class="future-info">
+              <li class="future-temp">Temp:</li>
+              <li class="future-wind">Wind:</li>
+              <li class="future-humidity">Humidity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="week-day">
+          <div class="each-card">
+            <h4 class="future-date">Future date</h4>
+            <i class="fa-solid fa-rainbow fa-3x center"></i>
+            <ul class="future-info">
+              <li class="future-temp">Temp:</li>
+              <li class="future-wind">Wind:</li>
+              <li class="future-humidity">Humidity:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="week-day">
+          <div class="each-card">
+            <h4 class="future-date">Future date</h4>
+            <i class="fa-solid fa-rainbow fa-3x center"></i>
+            <ul class="future-info">
+              <li class="future-temp">Temp:</li>
+              <li class="future-wind">Wind:</li>
+              <li class="future-humidity">Humidity:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
-</html> -->
+      <!-- <div class="card">
+        <div class="five-day-weather">
+          <div class="h2 card-header" id="fetched-city">5-Day Forecast:</div>
+
+          <div class="row p-4">
+            <div class="col-3">
+              <div class="card bg-light">
+                <div class="card-header">Date</div>
+                <div class="card-body">
+                  <p class="current-temp">Current temperature with icon?</p>
+                  <ul class="list-group list-group-flush overview">
+                    <li class="temperature">City searched-history</li>
+                    <li class="wind">City searched-history</li>
+                    <li class="humidity">City searched-history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card bg-light">
+                <div class="card-header">Date</div>
+                <div class="card-body">
+                  <p class="current-temp">Current temperature with icon?</p>
+                  <ul class="list-group list-group-flush overview">
+                    <li class="temperature">City searched-history</li>
+                    <li class="wind">City searched-history</li>
+                    <li class="humidity">City searched-history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card bg-light">
+                <div class="card-header">Date</div>
+                <div class="card-body">
+                  <p class="current-temp">Current temperature with icon?</p>
+                  <ul class="list-group list-group-flush overview">
+                    <li class="temperature">City searched-history</li>
+                    <li class="wind">City searched-history</li>
+                    <li class="humidity">City searched-history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card bg-light">
+                <div class="card-header">Date</div>
+                <div class="card-body">
+                  <p class="current-temp">Current temperature with icon?</p>
+                  <ul class="list-group list-group-flush overview">
+                    <li class="temperature">City searched-history</li>
+                    <li class="wind">City searched-history</li>
+                    <li class="humidity">City searched-history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3">
+              <div class="card bg-light">
+                <div class="card-header">Date</div>
+                <div class="card-body">
+                  <p class="current-temp">Current temperature with icon?</p>
+                  <ul class="list-group list-group-flush overview">
+                    <li class="temperature">City searched-history</li>
+                    <li class="wind">City searched-history</li>
+                    <li class="humidity">City searched-history</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </main>
+</body>
