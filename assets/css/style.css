@@ -1,4 +1,4 @@
-@import "default-theme.css"; 
+/* @import "default-theme.css";  */
 
 body,html {
     margin: 0;
@@ -6,6 +6,26 @@ body,html {
     color: var(--font-color); 
     font-family: var(--font-family);
     font-size: var(--font-medium);
+} 
+
+
+.week-day{
+    width:49%;
+    border: 1px solid #CCC;
 }
 
+.current-info li, .future-info li {
+    list-style-type: none;
+    margin: 15px;
+}
 
+@media screen and (max-width: 768px) {
+    .week-day{
+        width:19%;
+        border: 1px solid #CCC;
+    }
+}
+
+/* .week-day{
+    width:19%;
+} */
