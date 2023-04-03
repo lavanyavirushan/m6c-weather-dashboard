@@ -38,6 +38,7 @@
             <!-- city search input and button -->
             <form class="form-inline search-input">
               <input
+                id="search-location"
                 class="form-control mr-sm-2 mb-3 search-bar"
                 type="search"
                 placeholder="Search"
@@ -45,7 +46,8 @@
               />
               <button
                 class="btn btn-outline-success search-btn btn-block"
-                type="submit"
+                id="search-btn"
+                onclick="lookup(event)"
               >
                 Search
               </button>
@@ -53,92 +55,19 @@
           </div>
           <!-- city search history section -->
           <div class="hidden">
-            <ul class="list-group list-group-flush" id="searched-history">
-              <li class="list-group-item">City searched-history</li>
-              <li class="list-group-item">City searched-history</li>
-              <li class="list-group-item">City searched-history</li>
-            </ul>
+            <ul class="list-group list-group-flush" id="searched-history"></ul>
           </div>
         </div>
       </div>
 
       <!-- Right Content -->
-      <div class="col-md-12 col-xl-9 text-center">
+      <div class="col-md-12 col-xl-9">
         <div class="card mb-4">
-          <div class="current-weather">
-            <div class="h2 card-header" id="current-city-name">
-              Current City Name
-            </div>
-            <div class="card-body">
-              <h5 class="h3 current-date">Date</h5>
-              <p class="current-temp">Current temperature with icon?</p>
-              <ul class="list-group list-group-flush overview current-info">
-                <li class="current-temp">Temp:</li>
-                <li class="current-wind">Wind:</li>
-                <li class="current-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
+          <div id="current-weather"></div>
         </div>
 
         <div class="h2 card mb-1 card-header">5-Day Forecast:</div>
-        <div class="d-flex justify-content-between">
-          <div class="week-day">
-            <div class="each-card">
-              <h4 class="future-date">Future date</h4>
-              <i class="fa-solid fa-rainbow fa-3x center"></i>
-              <ul class="future-info">
-                <li class="future-temp">Temp:</li>
-                <li class="future-wind">Wind:</li>
-                <li class="future-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
-          <div class="week-day">
-            <div class="each-card">
-              <h4 class="future-date">Future date</h4>
-              <i class="fa-solid fa-rainbow fa-3x center"></i>
-              <ul class="future-info">
-                <li class="future-temp">Temp:</li>
-                <li class="future-wind">Wind:</li>
-                <li class="future-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
-          <div class="week-day">
-            <div class="each-card">
-              <h4 class="future-date">Future date</h4>
-              <i class="fa-solid fa-rainbow fa-3x center"></i>
-              <ul class="future-info">
-                <li class="future-temp">Temp:</li>
-                <li class="future-wind">Wind:</li>
-                <li class="future-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
-          <div class="week-day">
-            <div class="each-card">
-              <h4 class="future-date">Future date</h4>
-              <i class="fa-solid fa-rainbow fa-3x center"></i>
-              <ul class="future-info">
-                <li class="future-temp">Temp:</li>
-                <li class="future-wind">Wind:</li>
-                <li class="future-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
-          <div class="week-day">
-            <div class="each-card">
-              <h4 class="future-date">Future date</h4>
-              <i class="fa-solid fa-rainbow fa-3x center"></i>
-              <ul class="future-info">
-                <li class="future-temp">Temp:</li>
-                <li class="future-wind">Wind:</li>
-                <li class="future-humidity">Humidity:</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div id="weekday-focast"></div>
       </div>
     </main>
     <script src="./assets/js/script.js"></script>
