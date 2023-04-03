@@ -9,9 +9,13 @@ body,html {
 } 
 
 
+
+
 .week-day{
-    width:49%;
+    width:calc(20% - 6px);
+    margin: 3px;
     border: 1px solid #CCC;
+    float: left;
 }
 
 .current-info li, .future-info li {
@@ -19,13 +23,39 @@ body,html {
     margin: 15px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .week-day{
-        width:19%;
+        width:calc(33.33% - 10px);
+        margin: 5px;
         border: 1px solid #CCC;
     }
 }
 
-/* .week-day{
-    width:19%;
-} */
+@media screen and (max-width: 768px) {
+    .week-day{
+        width:calc(50% - 10px);
+        margin: 5px;
+        border: 1px solid #CCC;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .week-day{
+        width:calc(100% - 10px);
+        margin: 5px;
+        border: 1px solid #CCC;
+    }
+}
+
+.future-info{
+    padding: 0;
+}
+
+.future-info li{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.list-group-item{
+    cursor: pointer;
+}

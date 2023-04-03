@@ -55,8 +55,10 @@ This site allows users to access the current and 5 day forecasted weather for th
 
 As a traveler, you can see the weather outlook for multiple citites so that you can plan a trip accordingly.
 
+
 ![Screenshot](./assets/images/m6c-screenshot1.png)
 ![Screenshot](./assets/images/m6c-screenshot2.png)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
